@@ -1,159 +1,478 @@
-
 * {
   margin: 0;
   padding: 0;
-}
-html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
+
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
-  color: #000;
-  background-image: url(images/img4.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-div, section, header, span, ul, li, a{
-  box-sizing: border-box;
+  background: white;
+  color: black;
 }
 
-html{
-  scroll-behavior: smooth;
-}
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
+  background: black;
   display: flex;
   justify-content: space-between;
-  padding: 1em 2.5rem;
-  align-items:center;
-  background-color: #fff;
-  position: fixed;
-  z-index: 999;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
 }
 
-#menu li {
-  list-style: none; 
-  display: inline-block;
-  margin: 1rem;
-}
-
-#menu li a{
- color: #000;
- padding: 0.5rem;
- text-decoration: none;
- font-size: 1.2rem;
- border-radius: 3px;
- 
-}
 #logo {
-  max-height: 5rem;
+  height: 50px;
 }
 
-section {
-  height: 100vh;
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+#menu a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: white;
+  bottom: -6px;
+  left: 0;
+  transition: 0.3s;
+}
+
+#menu a:hover::after {
   width: 100%;
-  padding: 7.5rem 5rem;
 }
 
 #inicio {
-  background-color: #6A715B;
-  color: #fff;
-
+  margin-top: 80px;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+  background: white;
 }
 
-#servicos {
-  background-color: #F7941D;
-  color: #fff;
-}
-
-#produtos {
-  background-color: #6A715B;
-  color: #fff;
-}
-
-#sobre {
-  background-color:rgba(175, 39, 39, 0);
-  color: #000;
-}
-
-#galeria {
-  background-color: #F7941D;
-  color: #fff;
-}
-
-#contato {
-  background-color: #6A715B;
-  color: #fff;
-}
-#cards {
+.slide {
   width: 100%;
+  height: 110vh;
+  object-fit: cover;
+  position: absolute;
+  animation: slide 60s infinite;
+  opacity: 100%;
+ 
+}
+
+
+.cards-container {
+  padding: 90px 40px;
+  background: white;
+}
+
+#cards {
   display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
 }
 
 .card {
-  background-color: #FFFFFF;
-  color: #000000;
-
-  margin: 1.1em 1em;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background: black;
+  width: 280px;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
   transition: 0.3s;
-  border-radius: 5px;
-  width: 30%;
-  min-width: 240px;
-  display: inline-block;
-  
-}
-.card_container {
-  padding: 1em 1.2em;
 }
 
 .card img {
-  border-radius: 5px 5px 0px 0px;
-  object-fit: cover;
   width: 100%;
-  aspect-ratio: 16/9;
- 
-}
-.card_container h4 {
-  color: #E99B30;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  border-radius: 14px;
+  margin-bottom: 15px;
 }
 
-.card:hover {
- box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
- scale: 1.02;
- rotate: 2deg;
-} 
-.container {
+.card h3 {
+  font-size: 22px;
+  color: white;
+}
+
+.card p {
+  color: gray;
+  margin: 10px 0 20px;
+}
+
+.btn-card {
+  padding: 10px 25px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-card:hover {
+  background:gray;
+}
+
+.colecao {
+  padding: 100px 40px;
+  background: white;
+}
+
+.colecao h2 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+}
+
+.produto {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.produto h3 {
+  margin: 15px 0 5px;
+}
+
+.produto p {
+  font-size: 18px;
+  color: gray;
+}
+
+#sobre {
+  padding: 80px 40px;
+  background: white;
   text-align: center;
 }
-.infosobrenos {
-  display: flex;
-justify-content: center;
-text-align: center;
-}
-.textosobrenos {
-  width: 75%;
-  padding: 3rem;
-  border: 2px solid #E99B30;
-  background-color: #f7951d79;
-  border-radius: 25px;
-}
-#inicio {
-  background-color: #FFFFFF;
-  padding: 6rem 0 0 0;
-  height: auto;
+
+footer {
+  background: black;
+  padding: 20px;
+  text-align: center;
+  color: gray;
 }
 
-#inicio img {
-  object-fit: cover;
-  width: 100%;
-  aspect-ratio: 16/9;
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
 }
+/* FUNDO ESCURO */
+#modalProduto {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+/* CAIXA DA JANELA */
+#modalProduto > div {
+    background: #ffffff;
+    width: 70%;
+    max-width: 800px;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* BOTÃO FECHAR (X) */
+#modalProduto span {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* CONTEÚDO INTERNO */
+#modalProduto > div > div {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* IMAGEM DO PRODUTO */
+#modalImg {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* TEXTO DO PRODUTO */
+#modalProduto h2 {
+    margin-top: 0;
+}
+
+/* LISTA DE TAMANHOS */
+#modalProduto ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#modalProduto ul li {
+    border: 1px solid #000;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* EFEITO HOVER NOS TAMANHOS */
+#modalProduto ul li:hover {
+    background: #000;
+    color: #fff;
+}
+/* ================================
+   OVERLAY MODAL
+   ================================ */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: none;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ================================
+   CONTAINER DO MODAL
+   ================================ */
+.modal > div {
+  background: #fff;
+  max-width: 420px;
+  margin: 4% auto;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  position: relative;
+  animation: slideUp 0.35s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================================
+   BOTÃO FECHAR
+   ================================ */
+.modal span {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #111;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.modal span:hover {
+  transform: rotate(90deg);
+  color: #e63946;
+}
+
+/* ================================
+   IMAGEM PRODUTO
+   ================================ */
+#modalImg {
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   TÍTULOS
+   ================================ */
+#modalTitulo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#modalDescricao {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ================================
+   TAMANHOS
+   ================================ */
+#tamanhoSelecionado {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: border 0.2s;
+}
+
+#tamanhoSelecionado:focus {
+  outline: none;
+  border-color: #111;
+}
+
+/* ================================
+   BOTÃO ADICIONAR
+   ================================ */
+.modal button {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.15s;
+}
+
+.modal button:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   CARRINHO
+   ================================ */
+#modalCarrinho h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+#listaCarrinho {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+/* ITEM CARRINHO */
+#listaCarrinho li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* BOTÃO REMOVER */
+#listaCarrinho button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s;
+}
+
+#listaCarrinho button:hover {
+  color: #e63946;
+}
+
+/* ================================
+   TOTAL
+   ================================ */
+#totalCarrinho {
+  text-align: right;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ================================
+   SCROLLBAR MODERNA
+   ================================ */
+#listaCarrinho::-webkit-scrollbar {
+  width: 6px;
+}
+
+#listaCarrinho::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+#listaCarrinho::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+   
+.btn-remover {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn-remover:hover {
+  background-color: #333;
+}
+
+
+
+
+
+
+
+

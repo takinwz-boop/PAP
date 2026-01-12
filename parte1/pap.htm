@@ -1,79 +1,281 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>PETT STYLE</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="js/slideshow.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OG Streetwear</title>
+<link rel="stylesheet" href="style.css">
+<script src="js/slideshow.js" defer></script>
 </head>
+
 <body>
-  <header>
-      <a href="#"><img id="logo" src="images/pett-style-logo.png" alt="logo"></a>
-       <ul id="menu">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#galeria">Galeria</a></li>
-          <li><a href="#contato">Contato</a></li>
-       </ul>
-    </header>
 
-  <section id="inicio">
-    <img class="slidePETT" src="images/img1.jpg" alt="slide1">
-    <img class="slidePETT" src="images/img3 (2).jpg" alt="slide2">
-    <img class="slidePETT" src="images/img3.jpg" alt="slide3">
-    <img class="slidePETT" src="images/img4.jpg" alt="slide4">
-    <img class="slidePETT" src="images/img5.jpg" alt="slide5">
-  </section>
-<section id="servicos" class="cards-container">
-  <div id="cards">
-     <div class="card">
-        <img src="images/images.jpg" alt="Banho e Tosa">
-           <h3>Banho e Tosa</h3>
-           <p>Serviço completo de higiene e cuidados para seu pet com carinho e segurança.</p>
-        <a href="#" class="btn-card">Saiba Mais</a>
-   </div>
-     <div class="card">
-        <img src="images/transferir.jpg" alt="Acessórios">
-           <h3>Acessórios</h3>
-           <p>Laços, coleiras, roupas e tudo para deixar seu pet ainda mais estiloso.</p>
-        <a href="#" class="btn-card">Saiba Mais</a>
-   </div>
-     <div class="card">
-       <img src="images/Racao_Affinity_PetCare_GranPlus_Choice_Frango_e_Carne-removebg-preview.png" alt="Rações Premium">
-           <h3>Rações Premium</h3>
-           <p>Alimentos selecionados para garantir saúde, energia e bem-estar ao seu pet.</p>
-       <a href="#" class="btn-card">Saiba Mais</a>
-  </div>
-  </div>
+<header>
+<a href="#">
+<img id="logo" src="imagens/1.png" alt="logo">
+</a>
+
+<ul id="menu">
+<li><a href="#inicio">Início</a></li>
+<li><a href="#servicos">Serviços</a></li>
+<li><a href="#produtos">Produtos</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#contato">Contato</a></li>
+
+<li><a href="#" onclick="abrirCarrinho()">🛒</a></li>
+</ul>
+</header>
+
+<section id="inicio">
+<img class="slide" src="imagens/Slide1.jpg">
+<img class="slide" src="imagens/Slide2.jpg">
+<img class="slide" src="imagens/Slide3.jpg">
+<img class="slide" src="imagens/Slide4.jpg">
+<img class="slide" src="imagens/Slide5.jpg">
 </section>
-  <section id="servicos"></section>
-  <section id="produtos"></section>
-  <section id="sobre"> 
-  <div class="infosobrenos">
-    <div class="textosobrenos">
-      <h1>"Quem somos nós"</h1>
-      <p>Na PETT STYLE, acreditamos que cada pet merece ser tratado com amor, conforto e estilo. Somos uma marca dedicada ao bem-estar dos animais, oferecendo não apenas produtos, mas experiências que unem carinho, elegância e cuidado.
 
-Trabalhamos com:
+<section id="servicos" class="cards-container">
+<div id="cards">
+<div class="card">
+<img src="imagens/Coleção 1.jpg">
+<h3>Coleção BASICS</h3>
+<p>A Arte da Simplicidade</p>
+<a href="#colecao1" class="btn-card">Saiba Mais</a>
+</div>
 
-Rações de qualidade, selecionadas para garantir saúde e energia aos seus companheiros;
+<div class="card">
+<img src="imagens/Coleção 2.jpg">
+<h3>2ª Coleção</h3>
+<p>Nova Drop</p>
+<a href="#colecao2" class="btn-card">Saiba Mais</a>
+</div>
 
-Banho e tosa profissional, com atenção ao conforto, higiene e estética de cada pet;
+<div class="card">
+<img src="imagens/Coleção 3.jpg">
+<h3>3ª Coleção</h3>
+<p>Ultimos Lançamentos</p>
+<a href="#colecao3" class="btn-card">Saiba Mais</a>
+</div>
+</div>
+</section>
 
-Acessórios e artigos exclusivos, para pets que merecem estilo, personalidade e um toque de luxo.
+<section id="colecao1" class="colecao">
+<h2>Coleção BASICS</h2>
+<div class="produtos">
 
-Desde o início, o nosso propósito é proporcionar o melhor para cada animal, respeitando a sua individualidade. Valorizamos o uso de produtos seguros, atendimento personalizado e um ambiente onde os pets e os seus tutores se sintam bem-vindos.
+<div class="produto"
+onclick="abrirModal('T-shirt Oversized Basic','Camiseta streetwear em algodão premium.','imagens/roupa1.webp',19.99)">
+<img src="imagens/roupa1.webp">
+<h3>T-shirt NextStage </h3>
+<p>€19,99</p>
+</div>
 
-Mais do que uma marca, a PETT STYLE é um espaço onde o amor pelos animais se transforma em cuidado, beleza e dedicação todos os dias.</p>
-    </div>
-  </div></section>
-  <section id="galeria"></section>
-  <section id="contato"></section>
+<div class="produto"
+onclick="abrirModal('Camiseta OG Branca','Modelo confortável e moderno.','imagens/roupa2.webp',29.99)">
+<img src="imagens/roupa2.webp">
+<h3>Camiseta OG Branca</h3>
+<p>€29,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Hoodie OG','Hoodie urbano para o dia a dia.','imagens/roupa3.webp',39.99)">
+<img src="imagens/roupa3.webp">
+<h3>Hoodie OG</h3>
+<p>€39,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Boné OG','Boné ajustável com logo OG.','imagens/roupa4.webp',24.99)">
+<img src="imagens/roupa4.webp">
+<h3>Boné OG</h3>
+<p>€24,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Calça Street','Calça streetwear de corte moderno.','imagens/roupa5.webp',69.99)">
+<img src="imagens/roupa5.webp">
+<h3>Calça Street</h3>
+<p>€69,99</p>
+</div>
+
+</div>
+</section>
+
+<section id="colecao2" class="colecao">
+<h2>2ª Coleção</h2>
+<div class="produtos">
+
+<div class="produto"
+onclick="abrirModal('Produto 1','Descrição do produto.','imagens/roupa6.webp',34.99)">
+<img src="imagens/roupa6.webp">
+<h3>Camiseta OG Preta Vintage</h3>
+<p>€34,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Produto 2','Descrição do produto.','imagens/roupa7.webp',39.99)">
+<img src="imagens/roupa7.webp">
+<h3>Produto 2</h3>
+<p>€39,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Produto 3','Descrição do produto.','imagens/roupa8.webp',44.99)">
+<img src="imagens/roupa8.webp">
+<h3>Produto 3</h3>
+<p>€44,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Produto 4','Descrição do produto.','imagens/roupa9.webp',49.99)">
+<img src="imagens/roupa9.webp">
+<h3>Produto 4</h3>
+<p>€49,99</p>
+</div>
+
+<div class="produto"
+onclick="abrirModal('Produto 5','Descrição do produto.','imagens/roupa10.webp',69.99)">
+<img src="imagens/roupa10.webp">
+<h3>Produto 5</h3>
+<p>€69,99</p>
+</div>
+
+</div>
+</section>
+
+<section id="colecao3" class="colecao">
+<h2>3ª Coleção</h2>
+<div class="produtos">
+
+</div>
+</section>
+
+<section id="sobre">
+<div class="infosobrenos">
+<div class="textosobrenos">
+<h1>Quem somos nós</h1>
+<p></p>
+</div>
+</div>
+</section>
+
+<section id="contato"></section>
+
 <footer>
-  <p>© 2025 PETT STYLE</p>
+<p>© 2026 NextStage Streetwear</p>
 </footer>
+
+<div id="modalProduto" class="modal">
+<div>
+<span onclick="fecharModal()">&times;</span>
+<div>
+<img id="modalImg" src="">
+<div>
+<h2 id="modalTitulo"></h2>
+<p id="modalDescricao"></p>
+
+<h4>Tamanhos disponíveis</h4>
+
+<select id="tamanhoSelecionado">
+<option value="">Selecione</option>
+<option>XS</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+<option>XXL</option>
+</select>
+
+<br><br>
+<button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="modalCarrinho" class="modal">
+<div>
+<span onclick="fecharCarrinho()">&times;</span>
+<h2>Carrinho</h2>
+<ul id="listaCarrinho"></ul>
+<h3 id="totalCarrinho"></h3>
+</div>
+</div>
+
+<script>
+let carrinho = [];
+let produtoAtual = {};
+
+function abrirModal(titulo, descricao, imagem, preco) {
+document.getElementById("modalTitulo").innerText = titulo;
+document.getElementById("modalDescricao").innerText = descricao;
+document.getElementById("modalImg").src = imagem;
+produtoAtual = { titulo, preco };
+document.getElementById("modalProduto").style.display = "block";
+}
+
+function fecharModal() {
+document.getElementById("modalProduto").style.display = "none";
+}
+
+function adicionarAoCarrinho() {
+let tamanho = document.getElementById("tamanhoSelecionado").value;
+if (tamanho === "") {
+alert("Selecione um tamanho");
+return;
+}
+carrinho.push({
+...produtoAtual,
+tamanho
+});
+fecharModal();
+}
+
+function abrirCarrinho() {
+atualizarCarrinho();
+document.getElementById("modalCarrinho").style.display = "block";
+}
+
+function fecharCarrinho() {
+document.getElementById("modalCarrinho").style.display = "none";
+}
+
+function atualizarCarrinho() {
+let lista = document.getElementById("listaCarrinho");
+let total = document.getElementById("totalCarrinho");
+lista.innerHTML = "";
+let soma = 0;
+
+carrinho.forEach((item, i) => {
+soma += item.preco;
+lista.innerHTML += `
+ <li>
+ ${item.titulo} - ${item.tamanho} - €${item.preco.toFixed(2)}
+        <button class="btn-remover" onclick="removerItem(${i})">
+          Remover
+        </button>
+      </li>
+    `;
+  });
+total.innerText = "Total: €" + soma.toFixed(2);
+}
+
+function removerItem(index) {
+carrinho.splice(index, 1);
+atualizarCarrinho();
+}
+</script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
